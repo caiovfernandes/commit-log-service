@@ -19,3 +19,14 @@ A simple JSON/HTTP commit log service that accepts and responds with JSON and st
 - `curl -X GET localhost:8080 -d '{"offset": 0}'`
 - `curl -X GET localhost:8080 -d '{"offset": 1}'`
 - `curl -X GET localhost:8080 -d '{"offset": 2}'`
+
+
+## Compiling protobuf schema into go struct
+- `protoc api/v1/*.proto --go_out=. --go_opt=path=source_relative --proto_path=.`
+
+
+## Requirements
+- protobuf (binary)
+- protobuf (go lib)
+- protoc-gen-go-grpc
+- protoc-gen-go
